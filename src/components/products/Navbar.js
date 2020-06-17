@@ -1,0 +1,46 @@
+import React, {Component} from 'react'
+
+let logo = "https://send.firefox.com/icon.fd04d81a.svg"
+
+class NavBar extends Component{
+
+    state = {
+        name:'Ania',
+        email:'',
+        tel:'',
+        age:''
+    }
+
+    cuandoCambie = e =>{
+        let value = e.target.value
+        let field = e.target.name
+        // virtual dom:
+        this.setState({[field]:value})
+        console.log(this.state)
+        // NO SE MEZCLA VANILLA JS CON REACT NUNCA
+    }
+
+    onChange = ({target:{name,value}}) => this.setState({[name]:value})
+
+    render(){
+        return (
+            <nav className="" >
+                <img src={logo}/>
+                <h2 id="mijo">
+                    {this.state.name}
+                    {/* nombre, correo, tel, edad */}
+                </h2> 
+                <p>{this.state.email}</p>
+                <p>{this.state.tel}</p>
+                <p>{this.state.age}</p>
+                <input name="name" onChange={this.onChange} type="text" placeholder="Escribe tu nombre" />
+                <input name="email" onChange={this.onChange} type="text" placeholder="Escribe tu mail" />
+                <input name="tel" onChange={this.onChange} type="text" placeholder="Escribe tu tel" />
+                <input name="age" onChange={this.onChange} type="text" placeholder="Ahora tu edad" />
+                <button>Inicia Sesión</button>
+            </nav>
+        )
+    }
+}
+
+export default NavBar

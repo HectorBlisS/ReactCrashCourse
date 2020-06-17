@@ -1,15 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Home from './components/Home'
-import Nav from './components/Nav';
+import ProductsPage from './components/products/ProductsPage';
 
-function App() {
-  return (
-   <div>
-    <Nav/>
-   </div>
-  );
-}
+const App = () => <ProductsPage/>
 
 export default App;
