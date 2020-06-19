@@ -8,7 +8,7 @@ class NavBar extends Component{
         name:'Ania',
         email:'',
         tel:'',
-        age:''
+        age:'',
     }
 
     cuandoCambie = e =>{
@@ -18,6 +18,8 @@ class NavBar extends Component{
         this.setState({[field]:value})
         console.log(this.state)
         // NO SE MEZCLA VANILLA JS CON REACT NUNCA
+        // CLONAR UN FORM SIMPLE Y CUANDO LE DAN ENVIAR, USAR LOS DATOS PARA UN MENSAJE 
+        // ("JUANITO GRACIAS TE CONTACTAREMOS EN EMAIL")
     }
 
     onChange = ({target:{name,value}}) => this.setState({[name]:value})
@@ -37,7 +39,7 @@ class NavBar extends Component{
                 <input name="email" onChange={this.onChange} type="text" placeholder="Escribe tu mail" />
                 <input name="tel" onChange={this.onChange} type="text" placeholder="Escribe tu tel" />
                 <input name="age" onChange={this.onChange} type="text" placeholder="Ahora tu edad" />
-                <button>Inicia Sesión</button>
+                <button >Enviar formulario</button>
             </nav>
         )
     }

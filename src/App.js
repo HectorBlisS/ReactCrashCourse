@@ -1,7 +1,18 @@
 import React from 'react';
 import './App.css';
-import ProductsPage from './components/products/ProductsPage';
+import Routes from './Routes';
+import {Link, NavLink} from 'react-router-dom'
 
-const App = () => <ProductsPage/>
+const App = () => { // layout
+    return (
+        <div>
+            <nav>
+                <NavLink exact activeClassName="active" to="/">Home</NavLink>
+                <NavLink activeClassName="active" to="/products">Catálogo</NavLink>
+            </nav>
+            <Routes/>
+        </div>
+    )
+}
 
 export default App;

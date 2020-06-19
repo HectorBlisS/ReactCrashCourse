@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+// router
+import {BrowserRouter} from 'react-router-dom'
+
+let WithRouter = () => <BrowserRouter><React.StrictMode><App /></React.StrictMode></BrowserRouter> // wrapping
+
+ReactDOM.render(<WithRouter/>,
   document.getElementById('root')
 );
 
