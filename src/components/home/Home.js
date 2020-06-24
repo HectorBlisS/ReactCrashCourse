@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './home.module.css'
 
 const Home = () => {
     return(
-        <h2>Home mijo!</h2>
+        <p>Home mijo!</p>
     )
 }
 

@@ -9,6 +9,7 @@ const App = () => { // layout
             <nav>
                 <NavLink exact activeClassName="active" to="/">Home</NavLink>
                 <NavLink activeClassName="active" to="/products">Catálogo</NavLink>
+                <NavLink activeClassName="active" to="/about">Sobre nosotro</NavLink>
             </nav>
             <Routes/>
         </div>
