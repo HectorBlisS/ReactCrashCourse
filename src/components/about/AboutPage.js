@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Author from './Author'
 import Year from './Year'
+import Form from '../common/Form'
 
 //TAREA: 
 
@@ -20,6 +21,8 @@ class AboutPage extends Component{ // container
                <h1>Sobre nosotros...</h1> 
                <Author name={this.state.author} />
                <Year year={this.state.year} />
+               <h3>Contáctanos</h3>
+               <Form/>
             </div>
         )
     }
