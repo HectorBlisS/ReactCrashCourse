@@ -5,7 +5,7 @@ const { Option } = Select;
 
 class Form extends Component{
 
-    state = {
+    state = { // hack
         form:{
             name:"morro",
             email:"fixter@fixter.com",
@@ -14,6 +14,7 @@ class Form extends Component{
             message:""
         }        
     }
+
 
     handleChange = e => {
         let {name:field, value} = e.target // deconstruimos target << PS TODO TRUENA NO MMS >>
