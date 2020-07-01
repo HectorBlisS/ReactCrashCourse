@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import NavBar from './Navbar'
+import CatCard from './CatCard'
 
 class ProductsPage extends Component { // quien hace peticiones a un server | 1.- Container (Page) | 2.- Método: componentDidMount |
 
@@ -35,10 +36,19 @@ class ProductsPage extends Component { // quien hace peticiones a un server | 1.
         console.log("Me voy a desmontar")
     }
 
+    drawCat = cat => {
+        return <CatCard name={this.state.name} cat={cat} />
+    }
+
+    renderCats = () => {
+        let {cats} = this.state
+        return cats.map(this.drawCat)
+    }
+
     render() {
         return ( // porque es una colección 
             <div>
-              {this.state.cats.map(cat=><img width="50" src={cat.url} />)} 
+              {this.renderCats()}
             </div>
         )
     }
