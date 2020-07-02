@@ -45,6 +45,10 @@ class ProductsPage extends Component { // quien hace peticiones a un server | 1.
         return cats.map(this.drawCat)
     }
 
+    // van a crear un metodo que devuelva el último gato
+
+    // lastCat = () => <img src />
+
     render() {
         return ( // porque es una colección 
             <div>
