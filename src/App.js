@@ -3,6 +3,7 @@ import './App.css';
 import Routes from './Routes';
 import {Link, NavLink} from 'react-router-dom'
 import Button from './components/common/Button';
+import MiniForm from './components/common/MiniForm'
 
 const App = () => { // layout
     function click(){
@@ -16,22 +17,7 @@ const App = () => { // layout
                 <NavLink activeClassName="active" to="/about">Sobre nosotro</NavLink>
             </nav>
             {/* <Routes/> */}
-            <Button
-                onClick={click}
-                className="fancy-btn"
-                text="Puchame"
-                textStyle={{color:"red"}}
-            >
-                <h1>Mijo</h1>
-            </Button>
-            <Button 
-                textStyle={ {color:"white"} }
-                text="Cancelar"
-                style={ {backgroundColor:"orange"} }       
-                onClick={()=>alert("cancelado")} 
-                    >
-                        Cancelar
-            </Button>
+            <MiniForm/>
         </div>
     )
 }
